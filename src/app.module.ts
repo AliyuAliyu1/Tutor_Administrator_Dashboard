@@ -4,10 +4,6 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-// import { FeedModule } from './feed/feed.module';
-// import { User } from './users/user.entity';
-// import { StudentProgress } from './student-progress/student-progress.entity';
-// import { Schedule } from './schedules/schedule.entity';
 import { FeedModule } from './feed/feed.module';
 
 @Module({
@@ -31,11 +27,8 @@ import { FeedModule } from './feed/feed.module';
           sslmode: 'require',
         },
       },
-      // sslmode: 'require',
     }),
-    // User,
-    // StudentProgress,
-    // Schedule,
+
     FeedModule,
   ],
   controllers: [AppController],
